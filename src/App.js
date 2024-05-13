@@ -20,7 +20,9 @@ function App() {
         style={{
           display: "flex",
           alignItems: "center",
+          padding: "5px",
           flexWrap: "wrap",
+          gap: "5px",
         }}
       >
         {pArray}

@@ -4,50 +4,69 @@ const Postcard = ({ imgSo, nameSo, desSo, likeSo }) => {
   return (
     <div
       style={{
-        border: "2px solid grey",
+        width: "225px",
+        height: "310px",
+        border: "1px solid grey",
         borderRadius: "5px",
-        padding: "10px",
-        margin: "10px",
-        width: "260px",
-        height: "350px",
+        paddingTop: "5px",
+        paddingBottom: "5px",
       }}
     >
-      <div style={{ textAlign: "center" }}>
-        <img
-          src={imgSo}
-          alt="Post Name"
-          style={{
-            width: "200px",
-            height: "200px",
-          }}
-        />
-      </div>
       <div
         style={{
-          position: "relative",
-          width: "255px",
-          height: "118px",
+          height: "200px",
+          display: "flex",
+          justifyContent: "center",
+          paddingBottom: "5px",
         }}
       >
-        <h2>{nameSo}</h2>
-        <p>{desSo}</p>
-        <h5>{likeSo + " Likes"}</h5>
-        <button
-          style={{
-            position: "absolute",
-            bottom: "0",
-            right: "0",
-            backgroundColor: "blue",
-            color: "white",
-            padding: "5px 10px",
-            fontSize: "15px",
-            border: "none",
-            borderRadius: "5px",
-            cursor: "pointer",
-          }}
-        >
-          Like
-        </button>
+        <img src={imgSo} />
+      </div>
+
+      <div
+        style={{
+          height: "100px",
+          display: "flex",
+          flexDirection: "column",
+          paddingLeft: "12.5px",
+          paddingRight: "12.5px",
+        }}
+      >
+        <div style={{ height: "33%", fontWeight: "bold" }}>{nameSo}</div>
+        <div style={{ height: "33%" }}>{desSo}</div>
+        <div style={{ height: "33%", display: "flex" }}>
+          <div
+            style={{
+              width: "50%",
+
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            {likeSo} Likes
+          </div>
+          <div
+            style={{
+              width: "50%",
+              display: "flex",
+              justifyContent: "flex-end",
+            }}
+          >
+            <button
+              style={{
+                backgroundColor: "blue",
+                color: "white",
+                padding: "5px 9px",
+                fontSize: "12px",
+                border: "none",
+                borderRadius: "5px",
+                cursor: "pointer",
+              }}
+            >
+              Like
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
